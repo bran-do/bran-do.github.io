@@ -1,0 +1,27 @@
+body {
+    text-align: justify;
+    background-color: #F5DCC9;
+    color: #3E4E50;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#menu {
+    font-weight: bold;
+}
+
+.corpo-texto {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 12.6;
+}
+
+#refs {
+    background-color: #F8BD7F;
+}
+
+#lista-sites {
+    background-color: #F8BD7F;
+}
+
+#lista-skills {
+    font-size: 12;
+}
