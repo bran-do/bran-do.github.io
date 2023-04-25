@@ -7,11 +7,16 @@ body {
 
 #menu {
     font-weight: bold;
+    font-size: 13.2;
 }
 
 .corpo-texto {
     font-family:'Courier New', Courier, monospace;
     font-size: 12.6;
+}
+
+#lista-skills {
+    font-size: 12;
 }
 
 #refs {
@@ -20,8 +25,4 @@ body {
 
 #lista-sites {
     background-color: #F8BD7F;
-}
-
-#lista-skills {
-    font-size: 12;
 }
