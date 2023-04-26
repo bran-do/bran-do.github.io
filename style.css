@@ -11,11 +11,12 @@ body {
 }
 
 .corpo-texto {
-    font-family:'Courier New', Courier, monospace;
+    font-family: monospace;
     font-size: 12.6;
 }
 
 #lista-skills {
+    font-family: monospace;
     font-size: 12;
 }
 
