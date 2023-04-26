@@ -4,14 +4,18 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#menu {
+
+.menu {
     font-weight: bold;
     font-size: 13.2;
+    margin-left: 10px;
 }
+
 
 a {
     color:#47915b;
 }
+
 
 a:hover {
     text-decoration: none;
@@ -19,29 +23,28 @@ a:hover {
 
 }
 
+
 h1 {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 
-#foto {
+.foto {
     float: left;
-    margin: 40px;
-    border: 20px solid #f5ac72;
+    margin: auto 100px;
+    margin-right: 40px;
     border-radius: 20px;
+    border: 20px solid #f5ac72;
+    
 }
 
-
-#texto {
-    text-align: justify;
-    margin: 50px;
-    position: left;
-}
-
-
-.corpo-texto {
+.texto {
     font-family: monospace;
     font-size: 12.8;
+    text-align: justify;
+    margin: auto 50px;
+    margin-right: 100px;
 }
 
 
@@ -51,12 +54,10 @@ h1 {
 }
 
 
-#refs {
-    background-color: #F8BD7F;
+.lista-sites {
 }
 
 
-#lista-sites {
+.refs {
     font-family: monospace;
-    background-color: #F8BD7F;
 }
