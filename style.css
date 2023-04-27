@@ -11,6 +11,9 @@ body {
     margin-left: 10px;
 }
 
+hr {
+    border: 2px solid #F8BD7F;
+}
 
 a {
     color:#47915b;
@@ -27,6 +30,7 @@ a:hover {
 h1 {
     text-align: center;
     margin-bottom: 50px;
+    color: #286538;
 }
 
 
@@ -40,23 +44,18 @@ h1 {
 }
 
 .texto {
+    display: block;
     font-family: monospace;
     font-size: 12.8;
     text-align: justify;
-    margin: auto 50px;
-    margin-right: 100px;
+    margin: auto 100px;
 }
 
 
-#lista-skills {
+.lista-skills {
     font-family: monospace;
     font-size: 12;
 }
-
-
-.lista-sites {
-}
-
 
 .refs {
     font-family: monospace;
