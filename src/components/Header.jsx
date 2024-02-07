@@ -5,6 +5,11 @@ import logoSvg from "../assets/logo.svg"
 
 function Header() {
   const [loaded, setLoaded] = useState(false);
+  const [menuNav, setMenuNav] = useState(false);
+
+  const handleMenu = () => {
+    setMenuNav(!menuNav);
+  }
 
   useEffect(() => {
     const handleLoad = () => {
@@ -51,12 +56,33 @@ function Header() {
             </li>
           </ul>
 
-
-          <div>
-            <h1 className="flex text-2xl text-white bg-black px-2 py-1 md:hidden">Menu</h1>
+          <div onClick={ handleMenu }>
+            <h1 className="flex text-2xl text-white bg-black px-2 py-1 md:hidden">
+              { menuNav ? "Fechar menu" : "Menu"}
+            </h1>
           </div>
         </div>
       </nav>
+
+      <div>
+        <ul className={ `text-3xl text-black bg-teal-400 py-3 md:hidden ${menuNav ? "opacity-100 transition ease-in duration-500" : "opacity-0 transition ease-out duration-300"}` }>
+              <li className="px-3 py-3">
+                <Link to="/projects">
+                  <span>Projetos</span>
+                </Link>
+              </li>
+              <li className="px-3 py-3" >
+                <Link to="/about">
+                  <span>Sobre mim</span>
+                </Link>
+              </li>
+              <li className="px-3 py-3">
+                <Link to="/contact">
+                  <span>Contato</span>
+                </Link>
+              </li>
+            </ul>
+      </div>
     </>
   )
 }
