@@ -1,13 +1,27 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import rectangleLogo from "../svg/rectangle.svg";
 
 function Header() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoaded(true);
+    }
+
+    window.addEventListener('load', handleLoad);
+  }, [])
+
   return (
     <>
       <nav className="flex items-center justify-between px-3">
         <div className="flex items-center">
-            <img src={ rectangleLogo } className="md:w-16"/>
+            <img 
+              src={ rectangleLogo } 
+              className={ `md:w-16 ${loaded ? "opacity-100 transition ease-in duration-[2000ms]" : "opacity-0"}`}
+            />
           <h1 className="text-3xl italic ml-2 md:text-5xl md:ml-3">
             <Link to="/">
               Felipe <br/> Brandão
