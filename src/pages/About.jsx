@@ -12,7 +12,7 @@ function About() {
           Bem-vindx ao meu portfólio web.
           </p>
 
-          <img src={me} className="md:py-5 md:px-4"/>
+          <img src={me} alt="Felipe Brandão" className="md:py-5 md:px-4"/>
 
           <p className="p-4 text-xl md:w-3/4 py-5">
           Resolvi trazer essa minha foto logo de cara porque, de alguma forma, ela diz bastante sobre quem eu sou. <br/><br/>
