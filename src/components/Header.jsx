@@ -27,6 +27,7 @@ function Header() {
       <nav className={`flex items-center justify-between px-3 py-2 md:py-1
         md:${loaded ? "opacity-100 transition ease-in duration-1000" : "opacity-0"}
       `}>
+      <Link to="/">
         <div className="flex items-center">
             <img 
               src={ logoSvg } 
@@ -34,11 +35,10 @@ function Header() {
             />
 
           <h1 className="text-3xl italic ml-2 md:text-5xl md:ml-3">
-            <Link to="/">
               Felipe <br/> Brandão
-            </Link>
           </h1>
         </div>
+      </Link>
 
         <div>
           <ul className="text-3xl hidden md:flex justify-around px-1">
@@ -72,7 +72,7 @@ function Header() {
         </div>
       </nav>
 
-      <div className={ showMenu ? "opacity-100 transition ease-in duration-100" : "opacity-0" }>
+      <div className={ showMenu ? "opacity-100 transition ease-in duration-300" : "opacity-0" }>
         <ul className={ `absolute w-full h-full text-3xl text-black bg-teal-400 py-3 md:hidden ${showMenu ? "" : "hidden"}` }>
               <li className="px-3 py-3" >
                 <Link to="/about">
