@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <>
-      <nav className={`flex items-center justify-between px-3
+      <nav className={`flex items-center justify-between px-3 py-1
         md:${loaded ? "opacity-100 transition ease-in duration-1000" : "opacity-0"}
       `}>
         <div className="flex items-center">
@@ -40,14 +40,19 @@ function Header() {
         <div>
           <ul className="text-3xl hidden md:flex justify-around px-1">
             <li className="px-3 hover:text-teal-400 transition ease-out duration-500">
+              <Link to="/about">
+                <span>Sobre mim</span>
+              </Link>
+            </li>
+            <li className="px-3 hover:text-teal-400 transition ease-out duration-500">
               <Link to="/projects">
                 <span>Projetos</span>
               </Link>
             </li>
             <li className="px-3 hover:text-teal-400 transition ease-out duration-500">
-              <Link to="/about">
-                <span>Sobre mim</span>
-              </Link>
+              <a href="https://soundcloud.com/felipe-brandao-63641463" target="_blank">
+                <span>Portfólio musical</span>
+              </a>
             </li>
             <li className="px-3 hover:text-teal-400 transition ease-out duration-500">
               <Link to="/contact">
@@ -66,16 +71,21 @@ function Header() {
 
       <div>
         <ul className={ `text-3xl text-black bg-teal-400 py-3 md:hidden ${menuNav ? "opacity-100 transition ease-in duration-500" : "opacity-0 transition ease-out duration-300"}` }>
-              <li className="px-3 py-3">
-                <Link to="/projects">
-                  <span>Projetos</span>
-                </Link>
-              </li>
               <li className="px-3 py-3" >
                 <Link to="/about">
                   <span>Sobre mim</span>
                 </Link>
               </li>
+              <li className="px-3 py-3">
+                <Link to="/projects">
+                  <span>Projetos</span>
+                </Link>
+              </li>
+              <li className="px-3 py-3 hover:text-teal-400 transition ease-out duration-500">
+                <a href="https://soundcloud.com/felipe-brandao-63641463" target="_blank">
+                  <span>Portfólio musical</span>
+                </a>
+            </li>
               <li className="px-3 py-3">
                 <Link to="/contact">
                   <span>Contato</span>
