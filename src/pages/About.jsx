@@ -3,11 +3,11 @@ import me from '../assets/img/1.jpg'
 function About() {
   return (
     <>
-      <div className=" md:px-60 md:py-10">
-        <h1 className="p-4 text-4xl">Sobre mim</h1>
+      <div className=" md:px-20 md:py-10">
+        <h1 className="px-4 py-2 text-2xl md:text-4xl">Sobre mim</h1>
 
         <div className="font-body">
-          <p className="p-4 text-xl md:w-3/4 py-5">
+          <p className="p-4 py-2 pb-3 text-xl md:w-3/4">
           Oi :) <br/>
           Bem-vindx ao meu portfólio web.
           </p>
