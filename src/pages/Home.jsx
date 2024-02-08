@@ -1,8 +1,14 @@
-import Header from "../components/Header"
-
 function Home() {
   return (
-    <Header />
+    <div className="text-3xl">
+      <h1>Oi!</h1>
+      <h1>Oi!</h1>
+      <h1>Oi!</h1>
+      <h1>Oi!</h1>
+      <h1>Oi!</h1>
+      <h1>Oi!</h1>
+
+    </div>
   )
 }
 

@@ -1,23 +1,26 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useLocation, Outlet } from "react-router-dom";
 
 import logoSvg from "../assets/logo.svg"
 
 function Header() {
+  const location = useLocation();
   const [loaded, setLoaded] = useState(false);
-  const [menuNav, setMenuNav] = useState(false);
-
+  const [showMenu, setshowMenu] = useState(false);
   const handleMenu = () => {
-    setMenuNav(!menuNav);
+    setshowMenu(!showMenu);
   }
 
   useEffect(() => {
     const handleLoad = () => {
       setLoaded(true);
     }
-
+    
+    setshowMenu(false);
+    
     window.addEventListener('load', handleLoad);
-  }, [])
+  }, [location])
 
   return (
     <>
@@ -50,7 +53,7 @@ function Header() {
               </Link>
             </li>
             <li className="px-3 hover:text-teal-400 transition ease-out duration-500">
-              <a href="https://soundcloud.com/felipe-brandao-63641463" target="_blank">
+              <a href="https://soundcloud.com/felipe-brandao-63641463" target="_blank" rel="noreferrer">
                 <span>Portfólio musical</span>
               </a>
             </li>
@@ -63,14 +66,14 @@ function Header() {
 
           <div onClick={ handleMenu }>
             <h1 className="flex text-2xl text-white bg-black px-2 py-1 md:hidden">
-              { menuNav ? "Fechar menu" : "Menu"}
+              { showMenu ? "Fechar menu" : "Menu"}
             </h1>
           </div>
         </div>
       </nav>
 
-      <div>
-        <ul className={ `text-3xl text-black bg-teal-400 py-3 md:hidden ${menuNav ? "opacity-100 transition ease-in duration-500" : "opacity-0 transition ease-out duration-300"}` }>
+      <div className={ showMenu ? "opacity-100 transition ease-in duration-100" : "opacity-0" }>
+        <ul className={ `absolute w-full h-full text-3xl text-black bg-teal-400 py-3 md:hidden ${showMenu ? "" : "hidden"}` }>
               <li className="px-3 py-3" >
                 <Link to="/about">
                   <span>Sobre mim</span>
@@ -81,8 +84,8 @@ function Header() {
                   <span>Projetos</span>
                 </Link>
               </li>
-              <li className="px-3 py-3 hover:text-teal-400 transition ease-out duration-500">
-                <a href="https://soundcloud.com/felipe-brandao-63641463" target="_blank">
+              <li className="px-3 py-3">
+                <a href="https://soundcloud.com/felipe-brandao-63641463" target="_blank" rel="noreferrer">
                   <span>Portfólio musical</span>
                 </a>
             </li>
@@ -93,6 +96,8 @@ function Header() {
               </li>
             </ul>
       </div>
+
+      <Outlet />
     </>
   )
 }

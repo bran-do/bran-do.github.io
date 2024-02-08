@@ -17,6 +17,10 @@ export default {
 
       animation: {
         wiggle: 'wiggle 2s ease-in-out 1',
+      },
+
+      fontFamily: {
+        'body': ['"Fira Sans"'],
       }
     },
   },
